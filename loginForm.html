@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Form</title>
+</head>
+<body>
+    <h1>Register</h1>
+    <form action="google.com">
+        <div>
+            <label for="firstname">First Name:</label>
+            <input name="firtName" id="firstname" type="text" placeholder="John" required>
+            <label for="lastname">Last Name:</label>
+            <input name="lastName" id="lastname" type="text" placeholder="smith" required>
+        </div>
+        <div>
+            <label for="male">Male</label>
+            <input name="gender" id="male" type="radio" value="M">
+            <!--name value는 나중에 query로 넘어감 gender=M 이렇게 url안에서-->
+            <label for="female">Female</label>
+            <input name="gender" id="female" type="radio" value="F">
+            <label for="other">Other</label>
+            <input name="gender" id="other" type="radio" value="O">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="your email" required>
+            <label for="password">Password: </label>
+            <input id="password" type="password" pattern="((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" minlength="8"
+                   title="Password must contain at least one number and one uppercase and lowercase letter and one special character, and at least 8 or more characters" required>
+        </div>
+        <div>
+            <label for="month">Birthday:</label>
+            <select id="month"  name="Month">
+                <option value="" disabled selected hidden>Month</option>
+                <option value="Jan">Jan</option>
+                <option value="July">July</option>
+                <option value="Dec">Dec</option>
+            </select>
+            <select name="Day">
+                <option value="" disabled selected hidden>Day</option>
+                <option value="1">1</option>
+                <option value="11">14</option>
+                <option value="27">27</option>
+            </select>
+            <select name="Year">
+                <option value="" disabled selected hidden>Year</option>
+                <option value="2002">2002</option>
+                <option value="1994">1994</option>
+                <option value="1988">1988</option>
+            </select>
+        </div>
+        <p>I agree to the terms and conditions <input type="checkbox" name="agree" value="true" title="You need to agree to the conditions to sign up" required> </p>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
